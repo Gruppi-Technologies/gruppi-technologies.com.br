@@ -1,2 +1,2 @@
 export type ButtonSize = 'large' | 'thin';
-export type ButtonVariant = 'primary' | 'white-outline';
+export type ButtonVariant = 'primary' | 'outline';

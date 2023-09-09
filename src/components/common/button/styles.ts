@@ -17,17 +17,26 @@ function getStylesByVariant(variant: ButtonVariant) {
       border: none;
 
       color: white;
+
+      &:hover {
+        background-color: ${theme.colors.primary.dark};
+      }
     `;
   }
-  if (variant === 'white-outline') {
+  if (variant === 'outline') {
     return css`
-      background-color: ${theme.colors.surface.primary};
+      background-color: transparent;
 
       border: 2px solid ${theme.colors.primary.dark};
       color: ${theme.colors.primary.dark};
 
       svg {
         color: ${theme.colors.primary.dark};
+      }
+
+      &:hover {
+        background-color: ${theme.colors.primary.dark};
+        color: white;
       }
     `;
   }
@@ -52,15 +61,15 @@ export const Container = styled.button<ButtonProps>`
 
   position: relative;
 
-  &:hover {
-    filter: brightness(95%);
-  }
+  transition:
+    0.3s background-color ease,
+    0.3s color ease;
 
   ${({ variant }) => getStylesByVariant(variant)};
 `;
 
 export const Title = styled.p`
-  font-weight: 500;
+  font-weight: 800;
 `;
 
 export const IconWrapper = styled.div`
