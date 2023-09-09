@@ -3,8 +3,9 @@ import { FC } from 'react';
 import { Header } from '@/components/common/header/header';
 import { Page } from '@/components/common/page/page';
 
+import { HeroSection } from './components/hero-section/hero-section';
+import { ServiceSection } from './components/service-section/service-section';
 import { PAGE_TITLE, PAGE_DESCRIPTION, PAGE_URL, PAGE_PREVIEW_IMAGE_URL, PAGE_PREVIEW_IMAGE_ALT } from './constants';
-import { HeroSection } from './hero-section/hero-section';
 
 export const HomePage: FC = () => (
   <Page
@@ -18,6 +19,7 @@ export const HomePage: FC = () => (
 
     <main>
       <HeroSection />
+      <ServiceSection />
     </main>
   </Page>
 );

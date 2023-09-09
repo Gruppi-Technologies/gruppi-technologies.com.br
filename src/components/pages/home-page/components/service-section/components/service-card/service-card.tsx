@@ -1,0 +1,17 @@
+import { FC, ReactNode } from 'react';
+
+import { Container, ServiceDescription, ServiceTitle } from './styles';
+
+interface Props {
+  renderIcon: () => ReactNode;
+  title: string;
+  description: string;
+}
+
+export const ServiceCard: FC<Props> = ({ title, description, renderIcon }) => (
+  <Container>
+    {renderIcon()}
+    <ServiceTitle>{title}</ServiceTitle>
+    <ServiceDescription>{description}</ServiceDescription>
+  </Container>
+);
