@@ -17,6 +17,7 @@ const theme = {
       secondary: '#FDF9E9',
     },
   },
+  borderRadius: '0.7rem',
 };
 
 export default theme;
