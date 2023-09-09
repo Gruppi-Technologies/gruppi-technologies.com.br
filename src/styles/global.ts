@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body, button, input, select, textarea {
-    /* font-family: 'Nunito', sans-serif; */ // TODO: Definir de acordo com o projeto
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 1.6rem;
   }
 
