@@ -7,7 +7,7 @@ import { MobileIcon } from '@/components/icon/mobile-icon';
 import { SEOIcon } from '@/components/icon/seo-icon';
 
 import { ServiceCard } from './components/service-card/service-card';
-import { FIRST_DESCRIPTION, SECOND_DESCRIPTION, SERVICES } from './constants';
+import { FIRST_DESCRIPTION, SECOND_DESCRIPTION, SECTION_TITLE, SERVICES } from './constants';
 import {
   ButtonWrapper,
   Container,
@@ -21,7 +21,7 @@ import {
 export const ServiceSection: FC = () => (
   <Container>
     <Content>
-      <Title>Serviços</Title>
+      <Title>{SECTION_TITLE}</Title>
       <ServicesContainer>
         <Description>{FIRST_DESCRIPTION}</Description>
         <ServiceCardsWrapper>

@@ -1,3 +1,5 @@
+export const SECTION_TITLE = 'Serviços';
+
 export const FIRST_DESCRIPTION =
   'Nossa missão é ajudar nossos clientes a alcançar seus objetivos de negócios por meio de tecnologia. Fazemos isso desenvolvendo soluções personalizadas que se adaptam às necessidades específicas de cada cliente.';
 export const SECOND_DESCRIPTION =
