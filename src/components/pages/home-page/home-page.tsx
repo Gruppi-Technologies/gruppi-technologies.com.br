@@ -5,6 +5,7 @@ import { Page } from '@/components/common/page/page';
 
 import { AboutUsSection } from './components/about-us-section/about-us-section';
 import { HeroSection } from './components/hero-section/hero-section';
+import { MakeRightChoiceSection } from './components/make-right-choice-section/make-right-choice-section';
 import { ServiceSection } from './components/service-section/service-section';
 import { PAGE_TITLE, PAGE_DESCRIPTION, PAGE_URL, PAGE_PREVIEW_IMAGE_URL, PAGE_PREVIEW_IMAGE_ALT } from './constants';
 
@@ -22,6 +23,7 @@ export const HomePage: FC = () => (
       <HeroSection />
       <ServiceSection />
       <AboutUsSection />
+      <MakeRightChoiceSection />
     </main>
   </Page>
 );
