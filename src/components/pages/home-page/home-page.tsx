@@ -4,6 +4,7 @@ import { Header } from '@/components/common/header/header';
 import { Page } from '@/components/common/page/page';
 
 import { AboutUsSection } from './components/about-us-section/about-us-section';
+import { FAQSection } from './components/faq-section/faq-section';
 import { HeroSection } from './components/hero-section/hero-section';
 import { MakeRightChoiceSection } from './components/make-right-choice-section/make-right-choice-section';
 import { ServiceSection } from './components/service-section/service-section';
@@ -24,6 +25,7 @@ export const HomePage: FC = () => (
       <ServiceSection />
       <AboutUsSection />
       <MakeRightChoiceSection />
+      <FAQSection />
     </main>
   </Page>
 );
