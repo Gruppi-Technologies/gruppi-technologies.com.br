@@ -22,6 +22,10 @@ export const TitleWrapper = styled.div`
 
 export const Title = styled.h3`
   font-size: 2.8rem;
+
+  @media (max-width: 350px) {
+    font-size: 2.3rem;
+  }
 `;
 
 export const Text = styled.p`

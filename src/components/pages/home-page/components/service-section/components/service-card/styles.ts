@@ -38,3 +38,8 @@ export const ServiceDescription = styled.p`
 
   text-align: justify;
 `;
+
+export const IconWrapper = styled.div`
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+`;

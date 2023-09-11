@@ -16,6 +16,10 @@ const theme = {
       primary: '#FFFFFF',
       secondary: '#FDF9E9',
     },
+    semantic: {
+      positive: '#25D366',
+      negative: '#D32525',
+    },
   },
   borderRadius: '0.7rem',
 };

@@ -45,4 +45,8 @@ export const Title = styled.h2`
   font-size: 3.6rem;
   font-weight: 500;
   color: ${theme.colors.primary.dark};
+
+  @media (max-width: 350px) {
+    font-size: 3rem;
+  }
 `;
