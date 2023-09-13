@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import { Footer } from '@/components/common/footer/footer';
 import { Header } from '@/components/common/header/header';
 import { Page } from '@/components/common/page/page';
 
@@ -27,5 +28,7 @@ export const HomePage: FC = () => (
       <MakeRightChoiceSection />
       <FAQSection />
     </main>
+
+    <Footer />
   </Page>
 );
