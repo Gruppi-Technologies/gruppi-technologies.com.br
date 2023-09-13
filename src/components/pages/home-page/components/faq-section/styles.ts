@@ -11,7 +11,7 @@ export const Container = styled.section`
 
   background-color: ${theme.colors.surface.secondary};
 
-  padding: 2.4rem;
+  padding: 2.4rem 0 10.9rem 0;
 `;
 
 export const Content = styled.div`
@@ -31,9 +31,14 @@ export const Title = styled.h2`
   font-weight: 500;
   color: ${theme.colors.primary.dark};
 
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
 
   @media (max-width: 420px) {
     font-size: 3rem;
   }
+`;
+
+export const ButtonWrapper = styled.div`
+  margin-top: 2rem;
+  max-width: 20rem;
 `;
