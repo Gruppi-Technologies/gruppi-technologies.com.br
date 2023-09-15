@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Footer } from '@/components/common/footer/footer';
 import { Header } from '@/components/common/header/header';
 import { ContactModal } from '@/components/common/modals/contact-modal/contact-modal';
+import { FormData } from '@/components/common/modals/contact-modal/types';
 import { Page } from '@/components/common/page/page';
 import { useModal } from '@/hooks/use-modal/use-modal';
 
@@ -16,8 +17,24 @@ import { PAGE_TITLE, PAGE_DESCRIPTION, PAGE_URL, PAGE_PREVIEW_IMAGE_URL, PAGE_PR
 export const HomePage: FC = () => {
   const { isModalOpen, closeModal } = useModal();
 
-  function handleSubmit() {
-    closeModal();
+  async function handleSubmit(data: FormData) {
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        closeModal();
+      } else {
+        console.error('Erro ao enviar o e-mail');
+      }
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   return (

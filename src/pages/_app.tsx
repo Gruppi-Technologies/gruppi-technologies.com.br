@@ -1,6 +1,5 @@
 import { AppProps } from 'next/app';
 import { FC, useEffect } from 'react';
-import ReactModal from 'react-modal';
 import { ThemeProvider } from 'styled-components';
 
 import { ModalProvider } from '@/contexts/modal-context/modal-context-provider';

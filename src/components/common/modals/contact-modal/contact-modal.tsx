@@ -11,7 +11,7 @@ import { FormData } from './types';
 import validationSchema from './validation-schema';
 
 interface Props extends ModalProps {
-  onSubmit: (data: FormData) => void;
+  onSubmit: (data: FormData) => Promise<void>;
 }
 
 export const ContactModal: FC<Props> = ({ isOpen = false, onSubmit, ...rest }) => {
@@ -24,7 +24,6 @@ export const ContactModal: FC<Props> = ({ isOpen = false, onSubmit, ...rest }) =
 
   const onSubmitForm: SubmitHandler<FormData> = (data) => {
     onSubmit?.(data);
-    resetForm();
   };
 
   useEffect(() => {
@@ -64,7 +63,7 @@ export const ContactModal: FC<Props> = ({ isOpen = false, onSubmit, ...rest }) =
           errorMessage={formState.errors.message?.message}
         />
         <ButtonWrapper>
-          <Button title="Enviar" />
+          <Button title="Enviar" type="submit" />
         </ButtonWrapper>
       </Form>
     </Modal>
