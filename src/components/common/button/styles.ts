@@ -66,6 +66,12 @@ export const Container = styled.button<ButtonProps>`
     0.3s color ease;
 
   ${({ variant }) => getStylesByVariant(variant)};
+
+  &:disabled {
+    background-color: ${theme.colors.neutral[200]};
+    cursor: not-allowed;
+    color: ${theme.colors.neutral[500]};
+  }
 `;
 
 export const Title = styled.p`
