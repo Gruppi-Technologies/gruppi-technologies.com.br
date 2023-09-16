@@ -20,7 +20,7 @@ export const Button: FC<Props> = ({
   loading: isLoading = false,
   ...rest
 }) => (
-  <Container variant={variant} size={size} loading={isLoading ? true : undefined} {...rest}>
+  <Container $variant={variant} size={size} loading={isLoading ? true : undefined} {...rest}>
     {!isLoading && <Title>{title}</Title>}
     {renderIcon && <IconWrapper>{renderIcon?.()}</IconWrapper>}
     {isLoading && <AnimatedLoadingIcon aria-hidden={!isLoading} />}

@@ -7,7 +7,7 @@ import { ButtonSize, ButtonVariant } from './types';
 
 interface ButtonProps {
   size: ButtonSize;
-  variant: ButtonVariant;
+  $variant: ButtonVariant;
   loading?: boolean;
 }
 
@@ -67,7 +67,7 @@ export const Container = styled.button<ButtonProps>`
     0.3s background-color ease,
     0.3s color ease;
 
-  ${({ variant }) => getStylesByVariant(variant)};
+  ${({ $variant }) => getStylesByVariant($variant)};
 
   &:disabled {
     background-color: ${theme.colors.neutral[200]};
