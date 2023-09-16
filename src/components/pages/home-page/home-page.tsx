@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { Footer } from '@/components/common/footer/footer';
 import { Header } from '@/components/common/header/header';
@@ -16,8 +16,10 @@ import { PAGE_TITLE, PAGE_DESCRIPTION, PAGE_URL, PAGE_PREVIEW_IMAGE_URL, PAGE_PR
 
 export const HomePage: FC = () => {
   const { isModalOpen, closeModal } = useModal();
+  const [isLoading, setIsLoading] = useState(false);
 
   async function handleSubmit(data: FormData) {
+    setIsLoading(true);
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
@@ -32,6 +34,7 @@ export const HomePage: FC = () => {
       } else {
         console.error('Erro ao enviar o e-mail');
       }
+      setIsLoading(false);
     } catch (error) {
       console.error(error);
     }
@@ -58,7 +61,7 @@ export const HomePage: FC = () => {
 
         <Footer />
       </Page>
-      <ContactModal isOpen={isModalOpen} onRequestClose={closeModal} onSubmit={handleSubmit} />
+      <ContactModal isOpen={isModalOpen} onRequestClose={closeModal} onSubmit={handleSubmit} loading={isLoading} />
     </>
   );
 };

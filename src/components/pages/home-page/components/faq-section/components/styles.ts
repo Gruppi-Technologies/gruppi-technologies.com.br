@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 import theme from '@/styles/theme';
 
 interface FaqCardContainerProps {
-  expanded: boolean | undefined;
+  $expanded?: boolean;
 }
 
 export const FaqCardContainer = styled.div<FaqCardContainerProps>`
@@ -21,8 +21,8 @@ export const FaqCardContainer = styled.div<FaqCardContainerProps>`
 
   color: ${theme.colors.primary.dark};
 
-  background-color: ${({ expanded }) =>
-    expanded ? `${theme.colors.surface.primary}` : `${theme.colors.primary.light}`};
+  background-color: ${({ $expanded }) =>
+    $expanded ? `${theme.colors.surface.primary}` : `${theme.colors.primary.light}`};
 
   @media (max-width: 980px) {
     width: 80%;
@@ -60,7 +60,7 @@ export const Answer = styled.p`
 `;
 
 interface IconWrapperProps {
-  rotated: boolean | undefined;
+  $rotated?: boolean;
 }
 
 export const IconWrapper = styled.div<IconWrapperProps>`
@@ -68,5 +68,5 @@ export const IconWrapper = styled.div<IconWrapperProps>`
   max-height: 2.4rem;
 
   transition: transform 0.3s ease-in-out;
-  transform: ${({ rotated }) => (rotated ? 'rotate(45deg)' : 'rotate(0)')};
+  transform: ${({ $rotated }) => ($rotated ? 'rotate(45deg)' : 'rotate(0)')};
 `;

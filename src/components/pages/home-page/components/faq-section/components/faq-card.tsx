@@ -19,10 +19,10 @@ export const FaqCard: FC<Props> = ({ question, answer }) => {
   };
 
   return (
-    <FaqCardContainer onClick={toggleExpansion} expanded={isExpanded ? true : undefined}>
+    <FaqCardContainer onClick={toggleExpansion} $expanded={isExpanded ? true : undefined}>
       <FaqCardContent>
         <Question>{question}</Question>
-        <IconWrapper rotated={isIconRotated ? true : undefined}>
+        <IconWrapper $rotated={isIconRotated ? true : undefined}>
           <PlusIcon />
         </IconWrapper>
       </FaqCardContent>
