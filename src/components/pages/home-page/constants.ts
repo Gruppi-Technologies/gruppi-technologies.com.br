@@ -7,3 +7,5 @@ export const PAGE_URL = globalConfig.projectURL();
 export const PAGE_PREVIEW_IMAGE_URL = DEFAULT_PREVIEW_IMAGE_URL;
 export const PAGE_PREVIEW_IMAGE_ALT = globalConfig.projectTitle();
 export const COMPANY_NAME = 'Gruppi Technologies';
+
+export const STANDARD_BUTTON_TITLE = 'Quero saber mais';

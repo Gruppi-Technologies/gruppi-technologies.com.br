@@ -19,7 +19,9 @@ const theme = {
     semantic: {
       positive: '#25D366',
       negative: '#D32525',
+      alert: '#FF667A',
     },
+    white: '#FFFFFF',
   },
   borderRadius: '0.7rem',
 };

@@ -1,11 +1,11 @@
-import { BriefcaseIcon } from '@/components/icon/briefcase-icon';
-import { CalendarIcon } from '@/components/icon/calendar-icon';
-import { LockIcon } from '@/components/icon/lock';
-import { MobileIcon } from '@/components/icon/mobile-icon';
-import { SettingsIcon } from '@/components/icon/settings-icon';
-import { SlashIcon } from '@/components/icon/slash-icon';
-import { UnlockIcon } from '@/components/icon/unlock-icon';
-import { XCircleIcon } from '@/components/icon/x-circle-icon';
+import { BriefcaseIcon } from '@/components/icons/briefcase-icon';
+import { CalendarIcon } from '@/components/icons/calendar-icon';
+import { LockIcon } from '@/components/icons/lock';
+import { MobileIcon } from '@/components/icons/mobile-icon';
+import { SettingsIcon } from '@/components/icons/settings-icon';
+import { SlashIcon } from '@/components/icons/slash-icon';
+import { UnlockIcon } from '@/components/icons/unlock-icon';
+import { XCircleIcon } from '@/components/icons/x-circle-icon';
 
 export const SECTION_TITLE = 'Faça a escolha certa';
 

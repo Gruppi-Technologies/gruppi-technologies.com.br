@@ -1,6 +1,6 @@
 import { FC, useState } from 'react';
 
-import { PlusIcon } from '@/components/icon/plus-icon';
+import { PlusIcon } from '@/components/icons/plus-icon';
 
 import { Answer, FaqCardContainer, FaqCardContent, IconWrapper, Question } from './styles';
 
@@ -19,10 +19,10 @@ export const FaqCard: FC<Props> = ({ question, answer }) => {
   };
 
   return (
-    <FaqCardContainer onClick={toggleExpansion} isExpanded={isExpanded}>
+    <FaqCardContainer onClick={toggleExpansion} $expanded={isExpanded ? true : undefined}>
       <FaqCardContent>
         <Question>{question}</Question>
-        <IconWrapper isRotated={isIconRotated}>
+        <IconWrapper $rotated={isIconRotated ? true : undefined}>
           <PlusIcon />
         </IconWrapper>
       </FaqCardContent>
