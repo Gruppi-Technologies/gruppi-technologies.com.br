@@ -5,6 +5,7 @@ import { Header } from '@/components/common/header/header';
 import { ContactModal } from '@/components/common/modals/contact-modal/contact-modal';
 import { FormData } from '@/components/common/modals/contact-modal/types';
 import { Page } from '@/components/common/page/page';
+import { WhatsAppLink } from '@/components/common/whatsapp-link/whatsapp-link';
 import { useModal } from '@/hooks/use-modal/use-modal';
 
 import { AboutUsSection } from './components/about-us-section/about-us-section';
@@ -58,6 +59,8 @@ export const HomePage: FC = () => {
           <MakeRightChoiceSection />
           <FAQSection />
         </main>
+
+        <WhatsAppLink />
 
         <Footer />
       </Page>

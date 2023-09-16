@@ -21,6 +21,10 @@ const theme = {
       negative: '#D32525',
       alert: '#FF667A',
     },
+    whatsapp: {
+      standard: '#25D366',
+      onHover: '#2BA057',
+    },
     white: '#FFFFFF',
   },
   borderRadius: '0.7rem',
