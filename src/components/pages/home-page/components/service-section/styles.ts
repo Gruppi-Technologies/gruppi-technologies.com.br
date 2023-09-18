@@ -33,7 +33,21 @@ export const ServicesContainer = styled.div`
 
   flex-direction: column;
 
+  max-width: 70%;
+
   gap: 3.8rem;
+
+  @media (max-width: 1980px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 1980px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 1080px) {
+    max-width: 100%;
+  }
 `;
 
 export const Title = styled.h2`
@@ -57,7 +71,7 @@ export const ServiceCardsWrapper = styled.div`
   justify-content: center;
 
   gap: 3.5rem;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   @media (max-width: 1280px) {
     gap: 2.4rem;

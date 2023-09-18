@@ -12,12 +12,14 @@ export const FaqCardContainer = styled.div<FaqCardContainerProps>`
   display: flex;
   flex-direction: column;
 
+  gap: 1rem;
+
   cursor: pointer;
 
   border-radius: ${theme.borderRadius};
 
   padding: 2rem;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-out;
 
   color: ${theme.colors.primary.dark};
 

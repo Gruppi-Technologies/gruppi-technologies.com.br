@@ -23,8 +23,6 @@ export const Container = styled.div<ContainerProps>`
   display: flex;
   align-items: center;
 
-  cursor: pointer;
-
   padding: 1.4rem;
   gap: 1rem;
 
