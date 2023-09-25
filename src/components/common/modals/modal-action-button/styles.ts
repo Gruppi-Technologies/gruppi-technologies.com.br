@@ -1,0 +1,6 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  max-width: 20rem;
+  min-width: 15rem;
+`;

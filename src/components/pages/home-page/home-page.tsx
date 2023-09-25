@@ -1,9 +1,70 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
-import { Container, Title } from './styles';
+import { Footer } from '@/components/common/footer/footer';
+import { Header } from '@/components/common/header/header';
+import { ContactModal } from '@/components/common/modals/contact-modal/contact-modal';
+import { FormData } from '@/components/common/modals/contact-modal/types';
+import { Page } from '@/components/common/page/page';
+import { WhatsAppLink } from '@/components/common/whatsapp-link/whatsapp-link';
+import { useModal } from '@/hooks/use-modal/use-modal';
 
-export const HomePage: FC = () => (
-  <Container>
-    <Title>Hello World</Title>
-  </Container>
-);
+import { AboutUsSection } from './components/about-us-section/about-us-section';
+import { FAQSection } from './components/faq-section/faq-section';
+import { HeroSection } from './components/hero-section/hero-section';
+import { MakeRightChoiceSection } from './components/make-right-choice-section/make-right-choice-section';
+import { ServiceSection } from './components/service-section/service-section';
+import { PAGE_TITLE, PAGE_DESCRIPTION, PAGE_URL, PAGE_PREVIEW_IMAGE_URL, PAGE_PREVIEW_IMAGE_ALT } from './constants';
+
+export const HomePage: FC = () => {
+  const { isModalOpen, closeModal } = useModal();
+  const [isLoading, setIsLoading] = useState(false);
+
+  async function handleSubmit(data: FormData) {
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+
+      if (response.ok) {
+        closeModal();
+      } else {
+        console.error('Erro ao enviar o e-mail');
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  return (
+    <>
+      <Page
+        title={PAGE_TITLE}
+        description={PAGE_DESCRIPTION}
+        url={PAGE_URL}
+        previewImageURL={PAGE_PREVIEW_IMAGE_URL}
+        previewImageAlt={PAGE_PREVIEW_IMAGE_ALT}
+      >
+        <Header />
+
+        <main>
+          <HeroSection />
+          <ServiceSection />
+          <AboutUsSection />
+          <MakeRightChoiceSection />
+          <FAQSection />
+        </main>
+
+        <WhatsAppLink />
+
+        <Footer />
+      </Page>
+      <ContactModal isOpen={isModalOpen} onRequestClose={closeModal} onSubmit={handleSubmit} loading={isLoading} />
+    </>
+  );
+};
