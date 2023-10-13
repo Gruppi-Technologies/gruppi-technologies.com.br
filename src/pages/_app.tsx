@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
 import { FC, useEffect } from 'react';
 import { ThemeProvider } from 'styled-components';
@@ -20,6 +21,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyles />
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </ModalProvider>
   );
