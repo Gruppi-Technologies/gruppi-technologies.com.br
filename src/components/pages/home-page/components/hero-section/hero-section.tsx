@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import { Button } from '@/components/common/button/button';
+import { MODALS } from '@/components/common/modals/constants';
 import { useModal } from '@/hooks/use-modal/use-modal';
 
 import { STANDARD_BUTTON_TITLE } from '../../constants';
@@ -38,7 +39,7 @@ export const HeroSection: FC = () => {
             {HERO_SUBTITLE.standard[2]}
           </HeroSubtitle>
           <ButtonWrapper>
-            <Button title={STANDARD_BUTTON_TITLE} onClick={openModal} />
+            <Button title={STANDARD_BUTTON_TITLE} onClick={() => openModal(MODALS.CONTACT_FORM)} />
           </ButtonWrapper>
         </HeroDescription>
         <HeroImageWrapper>

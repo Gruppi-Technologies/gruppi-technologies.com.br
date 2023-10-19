@@ -32,7 +32,9 @@ class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link rel="icon" sizes="32x32" href="/images/brand/page-icon.svg" />
+          <link rel="icon" href="/images/brand/page-icon.svg" />
+          <link rel="shortcut icon" href="/images/brand/page-icon.svg" />
+          <link rel="apple-touch-icon" href="/images/brand/page-icon.svg" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />

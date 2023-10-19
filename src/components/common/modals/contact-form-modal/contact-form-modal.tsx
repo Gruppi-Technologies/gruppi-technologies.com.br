@@ -14,7 +14,7 @@ interface Props extends ModalProps {
   onSubmit: (data: FormData) => Promise<void>;
 }
 
-export const ContactModal: FC<Props> = ({ isOpen = false, onSubmit, loading: isLoading = false, ...rest }) => {
+export const ContactFormModal: FC<Props> = ({ isOpen = false, onSubmit, loading: isLoading = false, ...rest }) => {
   const {
     register,
     reset: resetForm,
@@ -63,7 +63,7 @@ export const ContactModal: FC<Props> = ({ isOpen = false, onSubmit, loading: isL
             isRequired
             errorMessage={formState.errors.message?.message}
           />
-          <Modal.ActionButton title="Enviar" type="submit" loading={isLoading} />
+          <Modal.ActionButton title="Enviar" type="submit" loading={isLoading ? true : undefined} />
         </Form>
       </Modal.Content>
     </Modal>

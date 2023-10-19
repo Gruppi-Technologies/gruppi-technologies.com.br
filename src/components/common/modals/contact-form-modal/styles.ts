@@ -16,4 +16,6 @@ export const Form = styled.form`
   gap: 1.5rem;
 
   color: ${theme.colors.neutral[500]};
+
+  padding: 2.4rem;
 `;
