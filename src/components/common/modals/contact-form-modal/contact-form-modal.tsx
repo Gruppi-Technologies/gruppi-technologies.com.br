@@ -14,7 +14,7 @@ interface Props extends ModalProps {
   onSubmit: (data: FormData) => Promise<void>;
 }
 
-export const ContactModal: FC<Props> = ({ isOpen = false, onSubmit, loading: isLoading = false, ...rest }) => {
+export const ContactFormModal: FC<Props> = ({ isOpen = false, onSubmit, loading: isLoading = false, ...rest }) => {
   const {
     register,
     reset: resetForm,

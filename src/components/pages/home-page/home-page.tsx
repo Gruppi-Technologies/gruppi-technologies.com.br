@@ -4,9 +4,9 @@ import { toast } from 'react-toastify';
 import { Footer } from '@/components/common/footer/footer';
 import { Header } from '@/components/common/header/header';
 import { MODALS } from '@/components/common/modals/constants';
+import { ContactFormModal } from '@/components/common/modals/contact-form-modal/contact-form-modal';
+import { FormData } from '@/components/common/modals/contact-form-modal/types';
 import { ContactInfoModal } from '@/components/common/modals/contact-info-modal/contact-info-modal';
-import { ContactModal } from '@/components/common/modals/contact-modal/contact-modal';
-import { FormData } from '@/components/common/modals/contact-modal/types';
 import { Page } from '@/components/common/page/page';
 import { WhatsAppLink } from '@/components/common/whatsapp-link/whatsapp-link';
 import { useModal } from '@/hooks/use-modal/use-modal';
@@ -79,7 +79,7 @@ export const HomePage: FC = () => {
 
         <Footer />
       </Page>
-      <ContactModal
+      <ContactFormModal
         isOpen={isModalOpen(MODALS.CONTACT_FORM)}
         onRequestClose={() => closeModal(MODALS.CONTACT_FORM)}
         onSubmit={handleSubmit}
