@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/react';
 import { AppProps } from 'next/app';
 import { FC, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
 import { ThemeProvider } from 'styled-components';
 
 import { ModalProvider } from '@/contexts/modal-context/modal-context-provider';
@@ -20,6 +21,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
     <ModalProvider>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
+        <ToastContainer />
         <Component {...pageProps} />
         <Analytics />
       </ThemeProvider>

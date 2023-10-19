@@ -1,4 +1,4 @@
-import { PROJECT_DESCRIPTION, PROJECT_TITLE, WHATSAPP_LINK } from './constants';
+import { MAIL_ADDRESS, PROJECT_DESCRIPTION, PROJECT_TITLE, WHATSAPP_LINK, WHATSAPP_NUMBER } from './constants';
 import { Mode } from './types';
 
 interface GlobalConfigOptions {
@@ -6,6 +6,8 @@ interface GlobalConfigOptions {
   projectTitle: string;
   projectDescription: string;
   projectURL: string;
+  whatsappNumber: string;
+  mailAddress: string;
   whatsappLink: string;
 }
 
@@ -14,13 +16,25 @@ export class GlobalConfig {
   private _projectTitle: string;
   private _projectDescription: string;
   private _projectURL: string;
+  private _whatsappNumber: string;
+  private _mailAddress: string;
   private _whatsappLink: string;
 
-  constructor({ mode, projectTitle, projectDescription, projectURL, whatsappLink }: GlobalConfigOptions) {
+  constructor({
+    mode,
+    projectTitle,
+    projectDescription,
+    projectURL,
+    whatsappNumber,
+    mailAddress,
+    whatsappLink,
+  }: GlobalConfigOptions) {
     this._mode = mode;
     this._projectTitle = projectTitle;
     this._projectDescription = projectDescription;
     this._projectURL = projectURL;
+    this._whatsappNumber = whatsappNumber;
+    this._mailAddress = mailAddress;
     this._whatsappLink = whatsappLink;
   }
 
@@ -40,6 +54,14 @@ export class GlobalConfig {
     return this._projectURL;
   }
 
+  whatsappNumber(): string {
+    return this._whatsappNumber;
+  }
+
+  mailAddress(): string {
+    return this._mailAddress;
+  }
+
   whatsappLink(): string {
     return this._whatsappLink;
   }
@@ -50,6 +72,8 @@ const globalConfig = new GlobalConfig({
   projectTitle: PROJECT_TITLE,
   projectDescription: PROJECT_DESCRIPTION,
   projectURL: process.env.NEXT_PUBLIC_PROJECT_URL,
+  whatsappNumber: WHATSAPP_NUMBER,
+  mailAddress: MAIL_ADDRESS,
   whatsappLink: WHATSAPP_LINK,
 });
 

@@ -2,7 +2,7 @@ import fs from 'fs';
 import { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 
-import { FormData } from '@/components/common/modals/contact-modal/types';
+import { FormData } from '@/components/common/modals/contact-form-modal/types';
 import { mailOptions, transporter } from '@/config/nodemailer/nodemailer';
 
 function readEmailTemplate() {

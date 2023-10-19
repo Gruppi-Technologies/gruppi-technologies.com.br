@@ -1,9 +1,14 @@
 import { createContext } from '@/utils/contexts';
 
+export interface ModalState {
+  [key: string]: boolean;
+}
+
 export interface ModalContextValue {
-  isModalOpen: boolean;
-  openModal: () => void;
-  closeModal: () => void;
+  modals: ModalState;
+  isModalOpen: (modalId: string) => boolean;
+  openModal: (modalId: string) => void;
+  closeModal: (modalId: string) => void;
 }
 
 export const ModalContext = createContext<ModalContextValue>('ModalContext');
