@@ -1,30 +1,44 @@
 import { ReactNode, useState, useCallback, useMemo } from 'react';
 
-import { ModalContext, ModalContextValue } from './modal-context';
+import { ModalContext, ModalContextValue, ModalState } from './modal-context';
 
 interface ModalProviderProps {
   children: ReactNode;
 }
 
 export const ModalProvider: React.FC<ModalProviderProps> = ({ children }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modals, setModals] = useState<ModalState>({});
 
-  const openModal = useCallback(() => {
-    setIsModalOpen(true);
+  const openModal = useCallback((modalId: string) => {
+    setModals((prevModals) => ({
+      ...prevModals,
+      [modalId]: true,
+    }));
   }, []);
 
-  const closeModal = useCallback(() => {
-    setIsModalOpen(false);
+  const closeModal = useCallback((modalId: string) => {
+    setModals((prevModals) => ({
+      ...prevModals,
+      [modalId]: false,
+    }));
   }, []);
 
-  const modal = useMemo<ModalContextValue>(
-    () => ({
-      isModalOpen,
-      openModal,
-      closeModal,
-    }),
-    [isModalOpen, openModal, closeModal],
+  const isModalOpen = useCallback(
+    (modalId: string) => {
+      return !!modals[modalId];
+    },
+    [modals],
   );
 
-  return <ModalContext.Provider value={modal}>{children}</ModalContext.Provider>;
+  const modalContextValue = useMemo<ModalContextValue>(
+    () => ({
+      modals,
+      openModal,
+      closeModal,
+      isModalOpen,
+    }),
+    [modals, openModal, closeModal, isModalOpen],
+  );
+
+  return <ModalContext.Provider value={modalContextValue}>{children}</ModalContext.Provider>;
 };

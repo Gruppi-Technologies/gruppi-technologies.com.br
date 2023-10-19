@@ -37,6 +37,10 @@ export const StyledModal = styled(ReactModalAdapter)`
 
     width: 100%;
     height: 100%;
+
+    @media (max-width: 350px) {
+      padding: 0 1rem;
+    }
   }
 
   &__content {
@@ -50,12 +54,7 @@ export const StyledModal = styled(ReactModalAdapter)`
     border-radius: ${theme.borderRadius};
     outline: none;
 
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-
-    padding-top: 0.8rem;
-
-    padding-bottom: 2.4rem;
+    padding: 0.8rem 1.2rem 2.4rem;
 
     display: flex;
     align-items: center;
@@ -63,6 +62,10 @@ export const StyledModal = styled(ReactModalAdapter)`
 
     overflow: ${({ enableScrollOnOverflow }) => (enableScrollOnOverflow ? 'auto' : '')};
     overflow-x: hidden;
+
+    @media (max-width: 350px) {
+      padding: 0.8rem 0.5rem 2.4rem;
+    }
   }
 `;
 
