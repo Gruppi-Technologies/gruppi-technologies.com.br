@@ -14,7 +14,7 @@ const theme = {
     },
     surface: {
       primary: '#FFFFFF',
-      secondary: '#ecf7fc',
+      secondary: '#dbf4ff',
     },
     semantic: {
       positive: '#25D366',
