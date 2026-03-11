@@ -6,9 +6,9 @@ export const Container = styled.header`
   width: 100%;
   min-height: 7.5rem;
 
-  border-bottom: 1px solid ${theme.colors.neutral[800]};
+  border-bottom: 1px solid ${theme.colors.primary.mid};
 
-  background-color: ${theme.colors.neutral[900]};
+  background-color: ${theme.colors.primary.dark};
 
   display: flex;
   align-items: center;
@@ -24,7 +24,7 @@ export const Content = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-  width: 12rem;
+  width: 15rem;
   height: 6.6rem;
 
   position: relative;

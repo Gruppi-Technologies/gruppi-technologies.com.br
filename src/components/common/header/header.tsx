@@ -15,7 +15,7 @@ export const Header: FC = () => {
     <Container>
       <Content>
         <LogoWrapper>
-          <Image src="/images/brand/logo.png" alt={COMPANY_NAME} fill quality={100} />
+          <Image src="/images/brand/logo.svg" alt={COMPANY_NAME} fill quality={100} />
         </LogoWrapper>
         <ButtonWrapper>
           <Button title="Contato" size="thin" onClick={() => openModal(MODALS.CONTACT_INFO)} />

@@ -19,7 +19,7 @@ export const Container = styled.div<ContainerProps>`
 
   h3 {
     color: ${({ variant }) =>
-      variant === 'positive' ? `${theme.colors.primary.mid}` : `${theme.colors.neutral[500]}`};
+      variant === 'positive' ? `${theme.colors.primary.light}` : `${theme.colors.neutral[200]}`};
   }
 `;
 

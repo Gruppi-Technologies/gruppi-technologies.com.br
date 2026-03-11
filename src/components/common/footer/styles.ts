@@ -11,7 +11,7 @@ export const Container = styled.footer`
 
   flex-direction: column;
 
-  background-color: ${theme.colors.neutral[900]};
+  background-color: ${theme.colors.primary.dark};
 `;
 
 export const Content = styled.div`
@@ -29,8 +29,8 @@ export const Content = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-  width: 15rem;
-  height: 22.8rem;
+  width: 40rem;
+  height: 26.6rem;
 
   position: relative;
 `;
@@ -51,10 +51,10 @@ export const CompanyCopyright = styled.div`
 
   padding: 2rem;
 
-  border-top: 1px solid ${theme.colors.neutral[800]};
-  background-color: ${theme.colors.neutral[900]};
+  border-top: 1px solid ${theme.colors.primary.mid};
+  background-color: ${theme.colors.primary.dark};
 `;
 
 export const CompanyText = styled.span`
-  color: ${theme.colors.neutral[500]};
+  color: ${theme.colors.primary.light};
 `;

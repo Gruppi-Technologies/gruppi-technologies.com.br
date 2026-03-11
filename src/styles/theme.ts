@@ -1,9 +1,9 @@
 const theme = {
   colors: {
     primary: {
-      light: '#FEEEB0',
-      mid: '#FAD02C',
-      dark: '#9F8007',
+      light: '#c3e2f2',
+      mid: '#6090a8',
+      dark: '#264667',
     },
     neutral: {
       100: '#EBEBEB',
@@ -14,7 +14,7 @@ const theme = {
     },
     surface: {
       primary: '#FFFFFF',
-      secondary: '#FDF9E9',
+      secondary: '#ecf7fc',
     },
     semantic: {
       positive: '#25D366',
