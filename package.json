@@ -25,7 +25,7 @@
     "@types/nodemailer": "^6.4.10",
     "@vercel/analytics": "^1.1.1",
     "next": "^14.2.29",
-    "nodemailer": "^6.9.5",
+    "nodemailer": "^6.9.9",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.46.1",
@@ -68,5 +68,15 @@
     "prettier": "^3.0.3",
     "ts-node": "^10.9.1",
     "typescript": "5.2.2"
+  },
+  "resolutions": {
+    "minimatch": "3.1.4",
+    "cross-spawn": ">=7.0.5",
+    "micromatch": ">=4.0.8",
+    "js-yaml": ">=4.1.1",
+    "@babel/traverse": ">=7.23.2",
+    "form-data": ">=4.0.4",
+    "diff": ">=4.0.4",
+    "lodash": ">=4.17.23"
   }
 }
