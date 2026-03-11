@@ -9,7 +9,7 @@ export const Container = styled.section`
   align-items: center;
   justify-content: center;
 
-  background-color: ${theme.colors.neutral[900]};
+  background-color: ${theme.colors.primary.dark};
 
   padding: 6rem 0;
 `;

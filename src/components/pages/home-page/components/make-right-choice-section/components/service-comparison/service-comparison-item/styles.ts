@@ -14,11 +14,12 @@ export const Container = styled.div<ContainerProps>`
   max-width: 40rem;
   min-width: 37rem;
 
-  color: ${({ variant }) => (variant === 'positive' ? `${theme.colors.primary.mid}` : `${theme.colors.neutral[500]}`)};
+  color: ${({ variant }) =>
+    variant === 'positive' ? `${theme.colors.primary.light}` : `${theme.colors.neutral[200]}`};
 
   border-radius: 3rem;
   border: 1px solid
-    ${({ variant }) => (variant === 'positive' ? `${theme.colors.primary.mid}` : `${theme.colors.neutral[500]}`)};
+    ${({ variant }) => (variant === 'positive' ? `${theme.colors.primary.light}` : `${theme.colors.neutral[200]}`)};
 
   display: flex;
   align-items: center;
